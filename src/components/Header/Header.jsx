@@ -8,15 +8,21 @@ const Header = () => {
             <li>
                 <NavLink to='/'>Home</NavLink>
             </li>
-            <li>
+            {/* <li>
                 <NavLink to='/experiences'>LookBook</NavLink>
             </li>
             <li>
                 <NavLink to='/news'>Blog</NavLink>
+            </li> */}
+            <li>
+                <NavLink to='/product'>Add Product</NavLink>
             </li>
             <li>
-                <NavLink to='/register'>Register</NavLink>
+                <NavLink to='/cart'>My Cart</NavLink>
             </li>
+            {/* <li>
+                <NavLink to='/register'>Register</NavLink>
+            </li> */}
             <li>
                 <NavLink to='/login'>Login</NavLink>
             </li>
@@ -50,7 +56,7 @@ const Header = () => {
                         {links}
                     </ul>
                 </div>
-                <a href='/' className=" normal-case lg:text-3xl md:mx-64 font-bold lg:mx-10 mx-24">Fashion</a>
+                <a href='/'><img className='w-24 ml-6' src="https://i.ibb.co/m0mghRL/Screenshot-1-removebg-preview.png" alt="" /></a>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1 text-white text-base font-semibold">{links}</ul>
