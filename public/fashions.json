@@ -1,0 +1,33 @@
+[
+    {
+     "id": 1,   
+     "name": "Nike",
+     "image": "https://i.ibb.co/b66j9kk/pexels-aman-jakhar-1124465.jpg"
+   },
+   {
+    "id": 2,   
+    "name": "Adidas",
+    "image": "https://i.ibb.co/R0YWM1g/pexels-kaique-rocha-48013.jpg"
+  },
+  {
+    "id": 3,   
+    "name": "Gucci",
+    "image": "https://i.ibb.co/VWCrX6g/pexels-antony-trivet-9982571.jpg"
+  },
+  {
+    "id": 4,   
+    "name": "Zara",
+    "image": "https://i.ibb.co/C08B86J/pexels-hanuman-photo-studio-17820264.jpg"
+  },
+  {
+    "id": 5,    
+    "name": "H&M",
+    "image": "https://i.ibb.co/p3tvP0Q/pexels-rdne-stock-project-5898586.jpg"
+  },
+  {
+    "id": 6,   
+    "name": "Levi's",
+    "image": "https://i.ibb.co/6yBNm9c/pexels-victor-coutant-14528152.jpg"
+  }
+ 
+ ]
