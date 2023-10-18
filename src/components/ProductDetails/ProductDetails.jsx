@@ -1,20 +1,33 @@
-import { useLoaderData, useParams } from "react-router-dom";
+
+import { useLoaderData} from "react-router-dom";
+import ProductCard from "../ProductCard/ProductCard";
 
 
 const ProductDetails = () => {
-    const fashions = useLoaderData();
-    const {id} = useParams();
-    const idInt = parseInt(id);
-    const fashion = fashions.find(fashion => fashion.id === idInt);
-    console.log(fashion); 
+    const products = useLoaderData();
+   
+
     return (
-        <div className="card w-1/2 glass mx-auto my-10" >
-        <figure><img src={fashion.image} alt=""/></figure>
-        <div className="card-body">
-          <h2 className="card-title">{fashion.name}</h2>      
-        </div>
+       
+<div className='m-20'>
+      
+      <h1 className='text-6xl my-20 text-center text-purple-600'>Products: {products.length}</h1>
+      
+      <div className='grid md:grid-cols-2 ml-20'>
+      {
+        products.map(product => <ProductCard
+        
+          key={product._id}
+          product={product}
+          
+         
+        ></ProductCard>)
+      }
+      
       </div>
+      </div> 
     );
 };
 
 export default ProductDetails;
+
