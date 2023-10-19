@@ -1,8 +1,15 @@
-# React + Vite
+# Project Features
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Live link:
 
-Currently, two official plugins are available:
+* In the home page the header portion the pages route are given. By clicking user can see details.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+* the brand nammes are come from json fake date with image and clicking the brand there will be brand wise details
+
+* In the add product page there is a form user can add product and store will be in database.
+
+* only valid user can add and update the product.
+
+* After register and login user can see successful message or add in database products
+
+* the password must be validated. the data must be in the database to fetch
