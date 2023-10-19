@@ -11,6 +11,9 @@ import AddProduct from './components/AddProduct/AddProduct';
 import ErrorPage from './components/ErrorPage/ErrorPage';
 import ProductDetails from './components/ProductDetails/ProductDetails';
 import UpdateProduct from './components/UpdateProduct/UpdateProduct';
+import Register from './components/Register/Register';
+import Login from './components/Login/Login';
+import AuthProvider from './Hook/AuthProvider';
 
 const router = createBrowserRouter([
   {
@@ -40,12 +43,22 @@ const router = createBrowserRouter([
         element: <UpdateProduct></UpdateProduct>,
         loader: ({params}) => fetch(`http://localhost:5000/product/${params.id}`)
       },
+      {
+        path: '/register',
+        element: <Register></Register>,
+      },
+      {
+        path: '/login',
+        element: <Login></Login> ,
+      },
     ]
   },
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+ 
+   <RouterProvider router={router} />
+  
   </React.StrictMode>,
 )

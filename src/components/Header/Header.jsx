@@ -20,9 +20,9 @@ const Header = () => {
             <li>
                 <NavLink to='/cart'>My Cart</NavLink>
             </li>
-            {/* <li>
+            <li>
                 <NavLink to='/register'>Register</NavLink>
-            </li> */}
+            </li>
             <li>
                 <NavLink to='/login'>Login</NavLink>
             </li>
