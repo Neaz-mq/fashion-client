@@ -47,7 +47,7 @@ const AddProduct = () => {
     return (
         <div className="bg-orange-100 p-24">
             <h2 className="text-3xl font-extrabold text-center">Add a Product</h2>
-            <div className='ml-96 -mr-16 mt-8'>
+            <div className='lg:ml-96 -mr-16 mt-8'>
             <form onSubmit={handleAddProduct}>
                 <div className="md:flex">
                     <div className="form-control md:w-1/2">

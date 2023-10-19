@@ -7,20 +7,14 @@ const Header = () => {
     const { user, logout } = useContext(AuthContext);
     console.log(user);
     const handleLogout = () => {
-      logout().then((result) => console.log(result));
+        logout().then((result) => console.log(result));
     };
-    
+
     const links = (
         <>
             <li>
                 <NavLink to='/'>Home</NavLink>
             </li>
-            {/* <li>
-                <NavLink to='/experiences'>LookBook</NavLink>
-            </li>
-            <li>
-                <NavLink to='/news'>Blog</NavLink>
-            </li> */}
             <li>
                 <NavLink to='/product'>Add Product</NavLink>
             </li>
@@ -63,22 +57,22 @@ const Header = () => {
                         {links}
                     </ul>
                 </div>
-                <a href='/'><img className='w-24 ml-6' src="https://i.ibb.co/m0mghRL/Screenshot-1-removebg-preview.png" alt="" /></a>
+                <a href='/'><img className='w-24 lg:ml-6 md:ml-64 ml-24' src="https://i.ibb.co/m0mghRL/Screenshot-1-removebg-preview.png" alt="" /></a>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1 text-white text-base font-semibold">{links}</ul>
             </div>
             <div>
-        {user && (
-          <button className="btn btn-success mr-3" onClick={handleLogout}>
-            logout
-          </button>
-        )}
+                {user && (
+                    <button className="btn btn-success mr-3" onClick={handleLogout}>
+                        logout
+                    </button>
+                )}
 
-        <p className="text-xl font-semibold">{user?.email}</p>
+                <p className="text-xl font-semibold">{user?.email}</p>
 
 
-      </div>
+            </div>
 
         </div>
     );

@@ -13,7 +13,7 @@ const ProductDetails = () => {
       
       <h1 className='text-6xl my-20 text-center text-purple-600'>Products: {products.length}</h1>
       
-      <div className='grid md:grid-cols-2 ml-20'>
+      <div className='grid md:grid-cols-2 ml-20 '>
       {
         products.map(product => <ProductCard
         
