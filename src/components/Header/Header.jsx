@@ -1,8 +1,15 @@
 
 import { NavLink } from 'react-router-dom';
+import { AuthContext } from '../../Hook/AuthProvider';
+import { useContext } from 'react';
 
 const Header = () => {
-
+    const { user, logout } = useContext(AuthContext);
+    console.log(user);
+    const handleLogout = () => {
+      logout().then((result) => console.log(result));
+    };
+    
     const links = (
         <>
             <li>
@@ -61,7 +68,17 @@ const Header = () => {
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1 text-white text-base font-semibold">{links}</ul>
             </div>
+            <div>
+        {user && (
+          <button className="btn btn-success mr-3" onClick={handleLogout}>
+            logout
+          </button>
+        )}
 
+        <p className="text-xl font-semibold">{user?.email}</p>
+
+
+      </div>
 
         </div>
     );
