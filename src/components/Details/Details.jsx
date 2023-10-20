@@ -1,12 +1,19 @@
 import { Link, useLoaderData } from "react-router-dom";
+import Swal from "sweetalert2";
 
 
 const Details = () => {
     const product = useLoaderData();
     const { _id, photo, name, brand, type, price, details, rating } = product;
 
-    
-
+    const handleCart = () => {
+      Swal.fire({
+        title: 'Success!',
+        text: 'Product Added in My Cart',
+        icon: 'success',
+        confirmButtonText: 'Cool'
+      })
+    }
     return (
         <div className="card  w-1/2 glass mx-auto my-10">
         <figure><img src={photo}alt="Shoes" /></figure>
@@ -20,7 +27,7 @@ const Details = () => {
           <div className="card-actions">
           <Link to={`/cart/${_id}`}>
                        
-          <button className="btn btn-primary">Add to Cart</button>
+          <button  onClick={handleCart} className="btn btn-primary">Add to Cart</button>
                        </Link>
           </div>
         </div>

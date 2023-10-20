@@ -11,7 +11,7 @@ const ProductDetails = () => {
        
 <div className='m-20'>
       
-      <h1 className='text-6xl my-20 text-center text-purple-600'>Products: {products.length}</h1>
+      
 
       <div className="carousel w-full max-h-96 mb-20 ">
   <div id="slide1" className="carousel-item relative w-full">

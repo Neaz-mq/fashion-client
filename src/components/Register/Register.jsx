@@ -4,14 +4,17 @@ import { AuthContext } from "../../Hook/AuthProvider";
 
 
 
+
 const Register = () => {
   const { createUser } = useContext(AuthContext);
   const handleRegister = e => {
+  
     e.preventDefault();
     const form = e.target;
     const email = form.email.value;
     const password = form.password.value;
     console.log(email, password);
+   
     createUser(email, password)
       .then(result => {
         console.log(result.user);
@@ -27,7 +30,7 @@ const Register = () => {
         })
           .then(res => res.json())
           .then(data => {
-            if (data.insertedId) {
+            if (data.insertedId && !/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{6,32}$/.test(password)) {
               Swal.fire({
                 title: 'Success!',
                 text: 'User Added database',
@@ -80,9 +83,11 @@ const Register = () => {
 
             </div>
           </div>
+         
         </form>
+        
       </div>
-
+      
     </div>
   );
 };
