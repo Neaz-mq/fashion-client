@@ -21,6 +21,8 @@ const AddProduct = () => {
 
         console.log(newProduct);
 
+        
+
         // send data to the server
 
         fetch('http://localhost:5000/product', {

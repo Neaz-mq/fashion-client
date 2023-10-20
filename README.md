@@ -1,6 +1,6 @@
 # Project Features
 
-Live link:
+Live link: fashion-apparel.netlify.app
 
 * In the home page the header portion the pages route are given. By clicking user can see details.
 
