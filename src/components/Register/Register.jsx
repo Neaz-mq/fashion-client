@@ -21,7 +21,7 @@ const Register = () => {
 
         // new user has been created
         const user = { email };
-        fetch('http://localhost:5000/user', {
+        fetch('https://fashion-server-qrm8z7xyj-neaz-morsheds-projects.vercel.app/user', {
           method: 'POST',
           headers: {
             'content-type': 'application/json'

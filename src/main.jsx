@@ -44,7 +44,7 @@ const router = createBrowserRouter([
             <ProductDetails></ProductDetails> 
             </PrivateRoute>
         ),
-        loader: () => fetch('http://localhost:5000/product')
+        loader: () => fetch('https://fashion-server-qrm8z7xyj-neaz-morsheds-projects.vercel.app/product')
       },
       {
         path: '/updateProduct/:id',
@@ -53,7 +53,7 @@ const router = createBrowserRouter([
         <UpdateProduct></UpdateProduct>
         </PrivateRoute>
         ), 
-        loader: ({params}) => fetch(`http://localhost:5000/product/${params.id}`)
+        loader: ({params}) => fetch(`https://fashion-server-qrm8z7xyj-neaz-morsheds-projects.vercel.app/product/${params.id}`)
       },
       {
         path: '/details/:id',
@@ -63,7 +63,7 @@ const router = createBrowserRouter([
             <Details></Details>
           </PrivateRoute>
         ),
-        loader: ({params}) => fetch(`http://localhost:5000/product/${params.id}`)
+        loader: ({params}) => fetch(`https://fashion-server-qrm8z7xyj-neaz-morsheds-projects.vercel.app/product/${params.id}`)
       },
       {
         path: '/register',
@@ -80,7 +80,7 @@ const router = createBrowserRouter([
         <MyCart></MyCart>
         </PrivateRoute>
         ),
-        loader: ({params}) => fetch(`http://localhost:5000/product/${params.id}`)
+        loader: ({params}) => fetch(`https://fashion-server-qrm8z7xyj-neaz-morsheds-projects.vercel.app/product/${params.id}`)
       },
     ]
   },
